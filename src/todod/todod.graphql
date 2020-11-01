@@ -1,0 +1,17 @@
+type Todod {
+  _id: String!
+  title: String!
+  content: String!
+}
+
+input TodoInput {
+  title: String!
+  content: String!
+}
+type Query {
+  todos: [Todod!]
+}
+
+type Mutation {
+  createTodod(todod: TodoInput!): Todod
+}
